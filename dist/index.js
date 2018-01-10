@@ -16,7 +16,7 @@ function httpCurdConfg(inApiContext, inHttp, inConfig) {
 
   _nextJsCore2.default.each(items, function (key, item) {
     inApiContext[item] = function (inData) {
-      return Http.post('' + baseUrl + item, inData);
+      return inHttp.post('' + baseUrl + item, inData);
     };
   });
 };
